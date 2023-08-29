@@ -1,0 +1,29 @@
+.form {
+  &-group {
+    margin: 1.2rem 0;
+  }
+  &-text {
+    display: block;
+    margin-top: 0.3rem;
+    color: #272727;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    border: 1.5px solid #ccc;
+  }
+}
+
+.form-in {
+  opacity: 0;
+}

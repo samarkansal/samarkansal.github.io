@@ -1,0 +1,206 @@
+@import "config";
+@import "utilities";
+@import "form";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 0.1px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background-color: #070606;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #3a70b4;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Nabvar
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2.5rem 0.5rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: solid 1px $primary-color;
+  opacity: 0.9;
+  ul {
+    display: flex;
+  }
+
+  a {
+    color: #cdcdcc;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+//parallax
+.bgimg {
+  // -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(0, 0, 0, 0.4)));
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  &-inner {
+    font-size: larger;
+    font-weight: bold;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &-1 {
+    @extend .bgimg;
+    background-image: url("../images/bicycle-delivery.jpg");
+  }
+  &-2 {
+    @extend .bgimg;
+    background-image: url("../images/baby-driver2.jpg");
+  }
+  &-3 {
+    @extend .bgimg;
+    background-image: url("../images/cabfocus.jpg");
+  }
+  &-4 {
+    @extend .bgimg;
+    background-image: url("../images/dark-woods.jpg");
+    //height: auto;
+  }
+}
+.bg-img-login {
+  background-image: url("../images/macouch.jpg");
+  height: 760px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  perspective: 3000px;
+
+  //background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bgimg-dash{
+  background-image: url("../images/maps-vint.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+  opacity: .9;
+}
+
+.low-cont-dash{
+  display: inline-grid;
+  grid-template-columns: auto auto;
+}
+
+.low-left-dash{
+  grid-row: 1/7;
+  background-image: url("../images/car-drive-in.jpg");
+  width: 40vw;
+  background-size: cover;
+  background-position: center center;
+  height: 50vh;
+  border-radius: 3rem;
+  margin: 5rem 5rem;
+  opacity: .9;
+}
+
+.dash-head{
+  grid-row: 2/4;
+  font-size: 2.5rem;
+  line-height: .7;
+  text-align: left;
+  margin: 1rem 2rem;
+  font-weight: bold;
+  color: rgb(204, 197, 197);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.bottom-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  //transition: all 0.2s ease-in;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.desc1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.pados-logo {
+  content: url("../images/pados-logo3.png");
+  height: 55px;
+  width: 170px;
+  opacity: 0.85;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
